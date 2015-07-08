@@ -1,7 +1,14 @@
 #!/usr/local/bin/python
 
-# Include modules.
-
+# Import modules.
+import argparse
 
 # Define variables.
 command_file = /var/spool/icinga/rw/icinga.cmd
+
+# Get command line arguments.
+parser = argparse.ArgumentParser(description='Write to the icinga command file.')
+group = parser.add_mutually_exclusive_group()
+group.add_argument('--host', action='store_true')
+group.add_argument('--service', action='store_false')
+args = parser.parse_args()
