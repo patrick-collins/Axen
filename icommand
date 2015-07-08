@@ -9,7 +9,7 @@ command_file = '/var/spool/icinga/rw/icinga.cmd'
 
 # Get command line arguments.
 parser = argparse.ArgumentParser(description='Write to the icinga command file.')
-parser.add_argument('--type', action='store', required=True, choices=['host', 'service')
+parser.add_argument('--type', action='store', required=True, choices=['host', 'service'])
 parser.add_argument('--target', action='store', required=True)
 parser.add_argument('--result', action='store', required=True, choices=['0', '1', '2', '3'])
 parser.add_argument('--data', action='store', required=True)
