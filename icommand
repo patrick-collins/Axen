@@ -29,3 +29,6 @@ command = '[' + seconds + '] ' + action + ';' + args.target + ';' + args.result 
 print command
 
 # Write the data to the icinga command file.
+command_file_handle = open(command_file, 'a')
+command_file_handle.write(command)
+command_file_handle.close()
