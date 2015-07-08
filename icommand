@@ -23,7 +23,7 @@ seconds = str(int(time.time()))
 # Format and print the command.
 if args.host:
 	action = 'PROCESS_HOST_CHECK_RESULT'
-else
+else:
 	action = 'PROCESS_SERVICE_CHECK_RESULT'
 command = '[' + seconds + '] ' + action
 print command
