@@ -19,7 +19,7 @@ args = parser.parse_args()
 seconds = str(int(time.time()))
 
 # Format and the command.
-if args.type = 'host':
+if args.type == 'host':
 	type = 'PROCESS_HOST_CHECK_RESULT'
 else:
 	type = 'PROCESS_SERVICE_CHECK_RESULT'
