@@ -4,7 +4,7 @@
 import argparse
 
 # Define variables.
-command_file = /var/spool/icinga/rw/icinga.cmd
+command_file = '/var/spool/icinga/rw/icinga.cmd'
 
 # Get command line arguments.
 parser = argparse.ArgumentParser(description='Write to the icinga command file.')
