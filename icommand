@@ -1,1 +1,4 @@
 #!/usr/local/bin/python
+
+# Define variables.
+command_file = /var/spool/icinga/rw/icinga.cmd
