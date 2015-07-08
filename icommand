@@ -21,7 +21,7 @@ args = parser.parse_args()
 seconds = int(time.time())
 
 # Format and print the command.
-command = '[', seconds, ']'
+command = '[' + seconds + ']'
 print command
 
 # Write the data to the icinga command file.
