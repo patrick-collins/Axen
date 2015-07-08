@@ -28,6 +28,6 @@ else:
 command = '[' + seconds + '] ' + action + ';' + args.target + ';' + args.result + ';' + args.data
 
 # Write the data to the icinga command file.
-command_file_handle = open(command_file, 'a')
-command_file_handle.write(command)
-command_file_handle.close()
+with open(command_file, 'a') as command_file_handle:
+	command_file_handle.write(command)
+	command_file_handle.close()
