@@ -2,6 +2,7 @@
 
 # Import modules.
 import argparse
+import time
 
 # Define variables.
 command_file = '/var/spool/icinga/rw/icinga.cmd'
@@ -15,3 +16,12 @@ parser.add_argument('--target', action='store')
 parser.add_argument('--result', action='store')
 parser.add_argument('--data', action='store')
 args = parser.parse_args()
+
+# Get the current time in unix seconds.
+seconds = int(time.time())
+
+# Format and print the command.
+command = '[', seconds, ']'
+print command
+
+# Write the data to the icinga command file.
