@@ -25,7 +25,7 @@ if args.host:
 	action = 'PROCESS_HOST_CHECK_RESULT'
 else:
 	action = 'PROCESS_SERVICE_CHECK_RESULT'
-command = '[' + seconds + '] ' + action + ',' + target + ',' + result + ',' + data
+command = '[' + seconds + '] ' + action + ',' + args.target + ',' + args.result + ',' + args.data
 print command
 
 # Write the data to the icinga command file.
