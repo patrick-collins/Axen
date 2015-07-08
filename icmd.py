@@ -1,5 +1,7 @@
 #!/usr/local/bin/python
 
+# This script writes data to the icinga command file icinga.cmd and is intended to test passive checks.
+
 # Import modules.
 import argparse
 import time
@@ -15,10 +17,10 @@ parser.add_argument('--result', action='store', required=True, choices=['0', '1'
 parser.add_argument('--data', action='store', required=True)
 args = parser.parse_args()
 
-# Get the current time in unix seconds.
+# Get the current time in unix seconds as a string.
 seconds = str(int(time.time()))
 
-# Format and the command.
+# Format the command.
 if args.type == 'host':
 	type = 'PROCESS_HOST_CHECK_RESULT'
 else:
