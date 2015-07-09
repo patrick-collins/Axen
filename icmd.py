@@ -25,7 +25,6 @@ seconds = str(int(time.time()))
 if args.type == 'host':
   command = '[' + seconds + '] PROCESS_HOST_CHECK_RESULT' + ';' + args.host + ';' + args.result + ';' + args.data
 else:
-	type = 'PROCESS_SERVICE_CHECK_RESULT'
   command = '[' + seconds + '] PROCESS_SERVICE_CHECK_RESULT' + ';' + args.host + ';' + args.service + ';' + args.result + ';' + args.data
 
 # Write the data to the icinga command file.
